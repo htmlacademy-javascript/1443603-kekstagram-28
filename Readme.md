@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Сергей Макаричев](https://up.htmlacademy.ru/javascript/28/user/1443603).
-* Наставник: `Павел Нюкало`.
+* Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/nyukalopavel).
 
 ---
 
