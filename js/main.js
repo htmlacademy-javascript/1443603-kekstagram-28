@@ -72,11 +72,6 @@ function calcUniqueInt(min, max) {
   };
 }
 
-const avatarId = calcRandomInt(AVATAR_ID_START, AVATAR_ID_END);
-const message = MESSAGES[calcRandomInt(0, MESSAGES.length - 1)];
-const name = NAMES[calcRandomInt(0, NAMES.length - 1)];
-const description = PHOTO_DESCRIPTIONS[calcRandomInt(0, PHOTO_DESCRIPTIONS.length - 1)];
-
 const commentId = calcUniqueInt(COMMENT_ID_START, COMMENT_ID_END);
 const photoId = calcUniqueInt(PHOTO_ID_START, PHOTO_ID_END);
 const photoUrl = calcUniqueInt(URL_START, URL_END);
@@ -88,9 +83,9 @@ const likeNumber = calcUniqueInt(LIKE_START, LIKE_END);
 function createComment() {
   return {
     id: commentId(),
-    avatar: `img/avatar-${avatarId}.svg`,
-    message: message,
-    name: name,
+    avatar: `img/avatar-${calcRandomInt(AVATAR_ID_START, AVATAR_ID_END)}.svg`,
+    message: MESSAGES[calcRandomInt(0, MESSAGES.length - 1)],
+    name: NAMES[calcRandomInt(0, NAMES.length - 1)],
   };
 }
 
@@ -102,7 +97,7 @@ function createPhotoDescription() {
   return {
     id: photoId(),
     url: `photos/${photoUrl()}.jpg`,
-    description: description,
+    description: PHOTO_DESCRIPTIONS[calcRandomInt(0, PHOTO_DESCRIPTIONS.length - 1)],
     likes: likeNumber(),
     comments: createComment(),
   };
